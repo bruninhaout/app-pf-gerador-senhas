@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Gerador de Senhas</title>
+  <link rel="stylesheet" href="styles/styles.css">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap" rel="stylesheet">
+</head>
+<body>
+  <div class="container">
+    <h2>Gerador de Senhas</h2>
+    <div class="form-group">
+      <label for="length">Tamanho da senha: <span id="slider-value">4</span></label><br>
+      <input type="range" id="length" min="4" max="20" value="4" oninput="atualizarValorSlide(this.value)">
+    </div>
+
+    <div class="checkbox-group">
+      <label><input type="checkbox" id="letters" checked> Letras</label>
+      <label><input type="checkbox" id="numbers"> Números</label>
+      <label><input type="checkbox" id="symbols"> Símbolos</label>
+    </div>
+
+    <button class="btn-primary" onclick="gerarSenha()">Gerar Senha</button>
+
+    <div class="password-box" id="senha-box" style="display:none">
+      <span id="senha-gerada"></span>
+      <button class="btn-copy" onclick="copiarSenha()">📋</button>
+    </div>
+
+    <table class="table">
+      <thead>
+        <tr>
+          <th>Senha</th>
+          <th>Tamanho</th>
+          <th>Tipos</th>
+          <th>Ações</th>
+        </tr>
+      </thead>
+      <tbody id="historico"></tbody>
+    </table>
+  </div>
+
+  <script src="scripts/script.js"></script>
+</body>
+</html>
