@@ -1,6 +1,6 @@
 # Gerador de Senhas
 
-Projeto desenvolvido com HTML, CSS e JavaScript para gerar senhas seguras e personalizadas, com armazenamento local e interface moderna.
+Projeto desenvolvido com HTML, CSS e JavaScript para gerar senhas seguras e personalizadas, com armazenamento local.
 
 ## Visão Geral
 
@@ -17,7 +17,6 @@ A interface é moderna, responsiva, com destaque para:
 
 - Slider com feedback visual do valor
 - Tabela com ações por linha
-- Estilo visual com animações e cores suaves
 
 ---
 
