@@ -133,7 +133,7 @@ th, td {
   text-align: center;
 }
 th {
-  background: #8F4EE6;
+  background: #833fdc;
   font-weight: 600;
   color: white;
 }
@@ -149,4 +149,98 @@ td button {
 td button:hover {
   background: #BDBDBD;
 }
+#logoutBtn {
+  position: fixed;
+  top: 10px;
+  left: 10px;
+  padding: 6px 12px;       /* pequeno, confortável */
+  font-size: 14px;         /* texto menor */
+  background-color: #833fdc;  /* cor vinho */
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.2);
+  z-index: 1000;
+  width: auto;             /* sem largura fixa */
+  min-width: 50px;         /* largura mínima para ficar bom */
+  text-align: center;
+}
+
+#logoutBtn:hover {
+  background-color: #833fdc;
+}
+
+.usuario-logado {
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 10px;
+  text-align: center;
+}
+
+/* Ajustes gerais para telas pequenas */
+@media (max-width: 768px) {
+  .container {
+    padding: 10px;
+    width: 100%;
+  }
+
+  h2 {
+    font-size: 1.5em;
+  }
+
+  .form-group label {
+    font-size: 0.9em;
+  }
+
+  .btn-primary,
+  .btn-copy {
+    width: 100%;
+    font-size: 1em;
+    margin: 5px 0;
+  }
+
+  /* Ajuste da tabela */
+  .table {
+    font-size: 0.9em;
+  }
+
+  .table thead {
+    display: none; /* Esconde cabeçalhos no mobile para evitar bagunça */
+  }
+
+  .table tr {
+    display: block;
+    margin-bottom: 10px;
+    border-bottom: 1px solid #ddd;
+  }
+
+  .table td {
+    display: block;
+    text-align: left;
+    padding: 5px 0;
+  }
+
+  .table td::before {
+    content: attr(data-label);
+    font-weight: bold;
+    display: block;
+  }
+}
+
+/* Para telas muito pequenas*/
+@media (max-width: 480px) {
+  h2 {
+    font-size: 1.2em;
+  }
+
+  .container {
+    padding: 5px;
+  }
+
+  .btn-primary {
+    font-size: 0.9em;
+  }
+}
+
 
